@@ -14,7 +14,7 @@ yarn serve
 vue-demi-test->package.json
 ```
 - "vue-demi": "latest",
-+ "vue-demi": "file:../../../OpenSource/vue-demi",
++ "vue-demi": "file:../vue-demi",
 ```
 然后再次执行流程，观察是否报错。
 ```
