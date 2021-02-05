@@ -11,7 +11,7 @@ yarn serve
 
 调整vue-demi-test插件中的vue-demi依赖
 
-vue-demi-test->package.json
+vue-demi-test -> package.json
 ```
 - "vue-demi": "latest",
 + "vue-demi": "file:../vue-demi",
