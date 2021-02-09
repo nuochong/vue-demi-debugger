@@ -37,7 +37,6 @@
 </template>
 
 <script>
-const tt = require('@vue/composition-api')
 export default {
   name: 'Home',
   components: {},
@@ -88,26 +87,3 @@ export default {
 
 <style lang="scss"></style>
 
-projectA:{
-  node_modules:{
-    b:{
-      node_modules:{
-        d:{
-          //处理是否安装c依赖的逻辑
-        }
-      },
-      packagejson:{
-        dependencies:{
-          d
-        }
-      }
-    }
-  },
-  packagejson:{
-    dependencies:{
-      a,
-      b,//用户在安装b依赖时b依赖中的d依赖根据默认的a依赖版本决定是否向projectA项目中动态添加c依赖，并安装
-      C
-    }
-  }   
-} 
