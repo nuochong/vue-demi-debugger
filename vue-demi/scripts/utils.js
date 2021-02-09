@@ -51,11 +51,7 @@ function switchVersion(version, vue) {
   if (version === 2) updateVue2API();
 }
 
-module.exports.loadModule = loadModule;
-module.exports.switchVersion = switchVersion;
 
-// const fs = require( 'fs' );
-// const path = require("path");
 
 function writeFile(p, text) {
   fs.writeFile(p, text, function (err) {
@@ -116,4 +112,26 @@ function createDocs(src, dist, callback) {
   }
 }
 
+// which-pm-runs
+function whichPMRuns() {
+  if (!process.env.npm_config_user_agent) {
+    return undefined
+  }
+  return pmFromUserAgent(process.env.npm_config_user_agent)
+}
+
+function pmFromUserAgent (userAgent) {
+  const pmSpec = userAgent.split(' ')[0]
+  const separatorPos = pmSpec.lastIndexOf('/')
+  return {
+    name: pmSpec.substr(0, separatorPos),
+    version: pmSpec.substr(separatorPos + 1)
+  }
+}
+
+
+module.exports.loadModule = loadModule;
+module.exports.switchVersion = switchVersion;
+
 module.exports.createDocs = createDocs;
+module.exports.whichPMRuns = whichPMRuns;
