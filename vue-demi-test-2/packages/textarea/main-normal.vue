@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted, toRefs, onUnmounted, computed, watch, watchEffect, onBeforeUnmount, isVue2 } from 'vue-demi';
+import { ref, reactive, onMounted, toRefs, onUnmounted, computed, watch, watchEffect, onBeforeUnmount, isVue2 } from 'vue-demi-auto';
 
 export default {
   name: 'wTextarea',

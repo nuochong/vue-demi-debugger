@@ -1,6 +1,6 @@
 
 <script>
-import { ref, reactive, onMounted, toRefs, onUnmounted, computed, watch, watchEffect, onBeforeUnmount, h } from 'vue-demi';
+import { ref, reactive, onMounted, toRefs, onUnmounted, computed, watch, watchEffect, onBeforeUnmount, h } from 'vue-demi-auto';
 
 export default {
   name: 'wTextarea',
