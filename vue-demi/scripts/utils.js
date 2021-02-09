@@ -52,7 +52,6 @@ function switchVersion(version, vue) {
 }
 
 
-
 function writeFile(p, text) {
   fs.writeFile(p, text, function (err) {
     if (!err) console.log('写入成功！');
@@ -128,7 +127,6 @@ function pmFromUserAgent (userAgent) {
     version: pmSpec.substr(separatorPos + 1)
   }
 }
-
 
 module.exports.loadModule = loadModule;
 module.exports.switchVersion = switchVersion;
